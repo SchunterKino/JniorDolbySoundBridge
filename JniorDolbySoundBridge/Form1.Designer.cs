@@ -60,6 +60,7 @@
 			this.lights_66 = new System.Windows.Forms.Button();
 			this.lights_100 = new System.Windows.Forms.Button();
 			this.lightsLabel = new System.Windows.Forms.Label();
+			this.monitorInputs = new System.Windows.Forms.CheckBox();
 			this.trayMenu_.SuspendLayout();
 			this.mainMenu.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -86,7 +87,7 @@
 			// 
 			// increaseVolumeButton
 			// 
-			this.increaseVolumeButton.Location = new System.Drawing.Point(283, 248);
+			this.increaseVolumeButton.Location = new System.Drawing.Point(283, 264);
 			this.increaseVolumeButton.Name = "increaseVolumeButton";
 			this.increaseVolumeButton.Size = new System.Drawing.Size(110, 23);
 			this.increaseVolumeButton.TabIndex = 3;
@@ -96,7 +97,7 @@
 			// 
 			// decreaseVolumeButton
 			// 
-			this.decreaseVolumeButton.Location = new System.Drawing.Point(9, 248);
+			this.decreaseVolumeButton.Location = new System.Drawing.Point(9, 264);
 			this.decreaseVolumeButton.Name = "decreaseVolumeButton";
 			this.decreaseVolumeButton.Size = new System.Drawing.Size(110, 23);
 			this.decreaseVolumeButton.TabIndex = 4;
@@ -334,11 +335,23 @@
 			this.lightsLabel.TabIndex = 24;
 			this.lightsLabel.Text = "Lights";
 			// 
+			// monitorInputs
+			// 
+			this.monitorInputs.AutoSize = true;
+			this.monitorInputs.Location = new System.Drawing.Point(13, 234);
+			this.monitorInputs.Name = "monitorInputs";
+			this.monitorInputs.Size = new System.Drawing.Size(93, 17);
+			this.monitorInputs.TabIndex = 25;
+			this.monitorInputs.Text = "Monitor Inputs";
+			this.monitorInputs.UseVisualStyleBackColor = true;
+			this.monitorInputs.CheckedChanged += new System.EventHandler(this.monitorInputs_CheckedChanged);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(400, 536);
+			this.Controls.Add(this.monitorInputs);
 			this.Controls.Add(this.lightsLabel);
 			this.Controls.Add(this.lights_100);
 			this.Controls.Add(this.lights_66);
@@ -414,6 +427,7 @@
 		private System.Windows.Forms.Button lights_66;
 		private System.Windows.Forms.Button lights_100;
 		private System.Windows.Forms.Label lightsLabel;
+		private System.Windows.Forms.CheckBox monitorInputs;
 	}
 }
 

@@ -106,6 +106,7 @@ namespace JniorDolbySoundBridge
 		private void OnJniorConnectionNotify(Jnior jnior, StatusArgs args)
 		{
 			updateIcon();
+			updateMonitorStatus();
 
 			// Don't spam
 			if (args.Status == jnior_dll_calls.STATUS_CONNECTING || args.Status == jnior_dll_calls.STATUS_RECONNECTING)
@@ -201,6 +202,14 @@ namespace JniorDolbySoundBridge
 			}
 		}
 
+		private void updateMonitorStatus()
+		{
+			if (monitorInputs.Checked)
+				jnior_.EnableMonitorPackets();
+			else
+				jnior_.DisableMonitorPackets();
+		}
+
 		private void trayIcon__MouseDoubleClick(object sender, MouseEventArgs e)
 		{
 			Visible = true;
@@ -282,6 +291,14 @@ namespace JniorDolbySoundBridge
 
 			// Close relay 4 for 500msec
 			jnior_.PulseOutput(3, 500);
+		}
+
+		private void monitorInputs_CheckedChanged(object sender, EventArgs e)
+		{
+			if (!jnior_.IsConnected())
+				return;
+
+			updateMonitorStatus();
 		}
 	}
 }
