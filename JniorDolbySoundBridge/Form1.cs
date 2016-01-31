@@ -248,5 +248,40 @@ namespace JniorDolbySoundBridge
 				"November 2015", "About", MessageBoxButtons.OK);
 		}
 
+		private void lights_0_Click(object sender, EventArgs e)
+		{
+			if (!jnior_.IsConnected())
+				return;
+
+			// Close relay 1 for 500msec
+			jnior_.PulseOutput(0, 500);
+		}
+
+		private void lights_33_Click(object sender, EventArgs e)
+		{
+			if (!jnior_.IsConnected())
+				return;
+
+			// Close relay 2 for 500msec
+			jnior_.PulseOutput(1, 500);
+		}
+
+		private void lights_66_Click(object sender, EventArgs e)
+		{
+			if (!jnior_.IsConnected())
+				return;
+
+			// Close relay 3 for 500msec
+			jnior_.PulseOutput(2, 500);
+		}
+
+		private void lights_100_Click(object sender, EventArgs e)
+		{
+			if (!jnior_.IsConnected())
+				return;
+
+			// Close relay 4 for 500msec
+			jnior_.PulseOutput(3, 500);
+		}
 	}
 }

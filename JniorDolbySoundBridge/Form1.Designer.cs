@@ -37,9 +37,11 @@
 			this.titleLabel = new System.Windows.Forms.Label();
 			this.trayIcon_ = new System.Windows.Forms.NotifyIcon(this.components);
 			this.trayMenu_ = new System.Windows.Forms.ContextMenuStrip(this.components);
+			this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.mainMenu = new System.Windows.Forms.MenuStrip();
 			this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.inputsLabel = new System.Windows.Forms.Label();
 			this.jniorInputs = new System.Windows.Forms.Label();
@@ -47,14 +49,17 @@
 			this.jniorOutputs = new System.Windows.Forms.Label();
 			this.lastUpdatedLabel = new System.Windows.Forms.Label();
 			this.lastUpdated = new System.Windows.Forms.Label();
-			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.logoBox = new System.Windows.Forms.PictureBox();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.dolbyConnectionLabel = new System.Windows.Forms.Label();
 			this.dolbyStatus = new System.Windows.Forms.Label();
 			this.logLabel = new System.Windows.Forms.Label();
-			this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.lights_0 = new System.Windows.Forms.Button();
+			this.lights_33 = new System.Windows.Forms.Button();
+			this.lights_66 = new System.Windows.Forms.Button();
+			this.lights_100 = new System.Windows.Forms.Button();
+			this.lightsLabel = new System.Windows.Forms.Label();
 			this.trayMenu_.SuspendLayout();
 			this.mainMenu.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -123,12 +128,19 @@
             this.openToolStripMenuItem,
             this.exitToolStripMenuItem});
 			this.trayMenu_.Name = "trayMenu_";
-			this.trayMenu_.Size = new System.Drawing.Size(153, 70);
+			this.trayMenu_.Size = new System.Drawing.Size(104, 48);
+			// 
+			// openToolStripMenuItem
+			// 
+			this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+			this.openToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+			this.openToolStripMenuItem.Text = "Open";
+			this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
 			// 
 			// exitToolStripMenuItem
 			// 
 			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
 			this.exitToolStripMenuItem.Text = "Exit";
 			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
 			// 
@@ -151,10 +163,17 @@
 			this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
 			this.menuToolStripMenuItem.Text = "Menu";
 			// 
+			// aboutToolStripMenuItem
+			// 
+			this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.aboutToolStripMenuItem.Text = "About";
+			this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+			// 
 			// exitToolStripMenuItem1
 			// 
 			this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-			this.exitToolStripMenuItem1.Size = new System.Drawing.Size(107, 22);
+			this.exitToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
 			this.exitToolStripMenuItem1.Text = "Exit";
 			this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
 			// 
@@ -212,13 +231,6 @@
 			this.lastUpdated.TabIndex = 13;
 			this.lastUpdated.Text = "never";
 			// 
-			// aboutToolStripMenuItem
-			// 
-			this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-			this.aboutToolStripMenuItem.Text = "About";
-			this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
-			// 
 			// pictureBox1
 			// 
 			this.pictureBox1.Image = global::JniorDolbySoundBridge.Properties.Resources.schunterkino;
@@ -239,7 +251,7 @@
 			// 
 			// textBox1
 			// 
-			this.textBox1.Location = new System.Drawing.Point(9, 305);
+			this.textBox1.Location = new System.Drawing.Point(9, 357);
 			this.textBox1.Multiline = true;
 			this.textBox1.Name = "textBox1";
 			this.textBox1.ReadOnly = true;
@@ -267,24 +279,71 @@
 			// logLabel
 			// 
 			this.logLabel.AutoSize = true;
-			this.logLabel.Location = new System.Drawing.Point(9, 286);
+			this.logLabel.Location = new System.Drawing.Point(9, 338);
 			this.logLabel.Name = "logLabel";
 			this.logLabel.Size = new System.Drawing.Size(28, 13);
 			this.logLabel.TabIndex = 19;
 			this.logLabel.Text = "Log:";
 			// 
-			// openToolStripMenuItem
+			// lights_0
 			// 
-			this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-			this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-			this.openToolStripMenuItem.Text = "Open";
-			this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+			this.lights_0.Location = new System.Drawing.Point(9, 312);
+			this.lights_0.Name = "lights_0";
+			this.lights_0.Size = new System.Drawing.Size(75, 23);
+			this.lights_0.TabIndex = 20;
+			this.lights_0.Text = "0%";
+			this.lights_0.UseVisualStyleBackColor = true;
+			this.lights_0.Click += new System.EventHandler(this.lights_0_Click);
+			// 
+			// lights_33
+			// 
+			this.lights_33.Location = new System.Drawing.Point(114, 312);
+			this.lights_33.Name = "lights_33";
+			this.lights_33.Size = new System.Drawing.Size(75, 23);
+			this.lights_33.TabIndex = 21;
+			this.lights_33.Text = "33%";
+			this.lights_33.UseVisualStyleBackColor = true;
+			this.lights_33.Click += new System.EventHandler(this.lights_33_Click);
+			// 
+			// lights_66
+			// 
+			this.lights_66.Location = new System.Drawing.Point(215, 312);
+			this.lights_66.Name = "lights_66";
+			this.lights_66.Size = new System.Drawing.Size(75, 23);
+			this.lights_66.TabIndex = 22;
+			this.lights_66.Text = "66%";
+			this.lights_66.UseVisualStyleBackColor = true;
+			this.lights_66.Click += new System.EventHandler(this.lights_66_Click);
+			// 
+			// lights_100
+			// 
+			this.lights_100.Location = new System.Drawing.Point(318, 312);
+			this.lights_100.Name = "lights_100";
+			this.lights_100.Size = new System.Drawing.Size(75, 23);
+			this.lights_100.TabIndex = 23;
+			this.lights_100.Text = "100%";
+			this.lights_100.UseVisualStyleBackColor = true;
+			this.lights_100.Click += new System.EventHandler(this.lights_100_Click);
+			// 
+			// lightsLabel
+			// 
+			this.lightsLabel.AutoSize = true;
+			this.lightsLabel.Location = new System.Drawing.Point(9, 293);
+			this.lightsLabel.Name = "lightsLabel";
+			this.lightsLabel.Size = new System.Drawing.Size(35, 13);
+			this.lightsLabel.TabIndex = 24;
+			this.lightsLabel.Text = "Lights";
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(400, 489);
+			this.ClientSize = new System.Drawing.Size(400, 536);
+			this.Controls.Add(this.lightsLabel);
+			this.Controls.Add(this.lights_100);
+			this.Controls.Add(this.lights_66);
+			this.Controls.Add(this.lights_33);
+			this.Controls.Add(this.lights_0);
 			this.Controls.Add(this.logLabel);
 			this.Controls.Add(this.dolbyStatus);
 			this.Controls.Add(this.dolbyConnectionLabel);
@@ -350,6 +409,11 @@
 		private System.Windows.Forms.Label dolbyStatus;
 		private System.Windows.Forms.Label logLabel;
 		private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+		private System.Windows.Forms.Button lights_0;
+		private System.Windows.Forms.Button lights_33;
+		private System.Windows.Forms.Button lights_66;
+		private System.Windows.Forms.Button lights_100;
+		private System.Windows.Forms.Label lightsLabel;
 	}
 }
 
