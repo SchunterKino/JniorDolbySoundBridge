@@ -226,8 +226,8 @@ namespace JniorDolbySoundBridge
 						dolby_.Disconnected = false;
 						break;
 					}
-					// Wait 30 seconds until retry.
-					Thread.Sleep(30000);
+					// Wait 15 seconds until retry.
+					Thread.Sleep(15000);
 				}
 			}
 			catch (Exception e)
