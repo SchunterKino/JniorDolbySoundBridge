@@ -268,7 +268,7 @@ namespace JniorDolbySoundBridge
 				return;
 
 			// Close relay 1 for 500msec
-			jnior_.PulseOutput(0, 500);
+			jnior_.PulseOutput(1, 500);
 		}
 
 		private void lights_33_Click(object sender, EventArgs e)
@@ -277,7 +277,7 @@ namespace JniorDolbySoundBridge
 				return;
 
 			// Close relay 2 for 500msec
-			jnior_.PulseOutput(1, 500);
+			jnior_.PulseOutput(2, 500);
 		}
 
 		private void lights_66_Click(object sender, EventArgs e)
@@ -286,7 +286,7 @@ namespace JniorDolbySoundBridge
 				return;
 
 			// Close relay 3 for 500msec
-			jnior_.PulseOutput(2, 500);
+			jnior_.PulseOutput(3, 500);
 		}
 
 		private void lights_100_Click(object sender, EventArgs e)
@@ -295,7 +295,7 @@ namespace JniorDolbySoundBridge
 				return;
 
 			// Close relay 4 for 500msec
-			jnior_.PulseOutput(3, 500);
+			jnior_.PulseOutput(4, 500);
 		}
 
 		private void monitorInputs_CheckedChanged(object sender, EventArgs e)
