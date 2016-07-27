@@ -173,6 +173,11 @@ namespace JniorDolbySoundBridge
 			
 			//Console.WriteLine("Inputs: " + sbInputs.ToString() + ", Outputs: " + sbOutputs.ToString() + ", Time : " + timeString);
 
+			// Don't do the bridging, if the box is unchecked.
+			// The jnior API fails to stop sending monitor packets after DisableMonitorPackets :P
+			if (!monitorInputs.Checked)
+				return;
+
 			// Handle volume inputs
 			// TODO: Don't increase when multiple monitor events come in without setting this back to 0.
 			if (jnior.GetInput(JNIOR_INCREASE_INPUT) == 1)
