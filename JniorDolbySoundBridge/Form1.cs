@@ -254,7 +254,7 @@ namespace JniorDolbySoundBridge
 				"when an input is triggered in the Jnior Box.\n\n"+
 				"Dolby CP750 connection through telnet on "+DolbyCP750.DOLBY_IP+":"+DolbyCP750.DOLBY_PORT+"\n"+
 				"sending \"cp750.sys.fader ?|X\" commands.\n\n"+
-				"Jnior Box 310 connection using JNIOR Protocol .NET wrappper:\n"+
+				"Jnior Box 310 connection using JNIOR Protocol .NET wrapper:\n"+
 				"http://www.integpg.com/support/sdk/\n" +
 				"Connecting to " + JNIOR_IP + ":" + JNIOR_PORT + " listening on Input " + (JNIOR_INCREASE_INPUT + 1) + " to increase\n" +
 				"the volume and Input " + (JNIOR_DECREASE_INPUT + 1) + " to decrease it.\n\n" +
